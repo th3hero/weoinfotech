@@ -80,3 +80,9 @@ if (!isset($file)) {
         $newFilepath = $targetDirectory . "/" . $filename . "." . $extension;
     }
 }
+
+//code to upload
+if (!copy($filepath, $newFilepath)) { // Copy the file, returns false if failed
+    die("Can't move file.");
+}
+echo 'file move';
